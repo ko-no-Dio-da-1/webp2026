@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex#4 聖誕樹</title>
+</head>
+<body>
+    <h1>ex#4 聖誕樹（請看 Console）</h1>
+
+    <script>
+        // 幫你把重複印字的功能寫好（講義提示的 repeatchar）
+        function repeatChar(n, char) {
+            let result = '';
+            for (let i = 0; i < n; i++) {
+                result += char;
+            }
+            return result;
+        }
+
+        // 畫樹的上半部（三角形）
+        function printTreeTop(n) {
+            for (let i = 0; i < n; i++) {
+                let spaces = repeatChar(n - i - 1, ' ');   // 左邊空格
+                let stars  = repeatChar(2 * i + 1, '*');   // 星星
+                console.log(spaces + stars);
+            }
+        }
+
+        // 畫樹的下半部（樹幹）
+        function printTreeBottom(n) {
+            let spaces = repeatChar(n - 1, ' ');   // 置中樹幹
+            for (let i = 0; i < 2; i++) {          // 兩行樹幹
+                console.log(spaces + '*');
+            }
+        }
+
+        // 主函式（講義給的 tree 框架）
+        function tree(n) {
+            printTreeTop(n);
+            printTreeBottom(n);
+        }
+
+        // 呼叫畫樹！可以改數字調整高度（建議 5~10）
+        tree(6);
+    </script>
+</body>
+</html>
