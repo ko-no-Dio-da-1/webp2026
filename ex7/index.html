@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>打字機消消樂 - ex#7</title>
+    <style>
+        body {
+            font-family: monospace;
+            text-align: center;
+            background: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 { color: #d32f2f; }
+        #container {
+            font-size: 3rem;
+            letter-spacing: 8px;
+            border: 4px dashed #333;
+            background: white;
+            padding: 30px;
+            min-height: 120px;
+            width: 80%;
+            max-width: 800px;
+            margin: 40px auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .info {
+            font-size: 1.2rem;
+            color: #666;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🕹️ 打字機消消樂 - ex#7</h1>
+    <div id="container" tabindex="0"></div>
+    <div class="info">
+        按鍵盤字母 → 打對就消掉第一個字母<br>
+        連續打錯 3 次 → 額外增加 3 個亂數字母！
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
